@@ -11,8 +11,9 @@ import { useUser } from '@clerk/nextjs';
 import Loader from './Loader';
 import { Textarea } from './ui/textarea';
 import ReactDatePicker from 'react-datepicker';
-import { useToast } from './ui/use-toast';
+import { useToast } from "@/components/ui/use-toast";
 import { Input } from './ui/input';
+
 
 const initialValues = {
   dateTime: new Date(),
@@ -37,7 +38,7 @@ const MeetingTypeList = () => {
       if (!values.dateTime) {
         toast({ title: 'Please select a date and time' });
         return;
-      }
+      } 
       const id = crypto.randomUUID();
       const call = client.call('default', id);
       if (!call) throw new Error('Failed to create meeting');
