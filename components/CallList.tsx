@@ -7,7 +7,7 @@ import { useGetCalls } from '@/hooks/useGetCalls';
 import MeetingCard from './MeetingCard';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { useToast } from "@/components/ui/use-toast";
+import { useToast } from "./ui/use-toast";
 
 
 const CallList = ({ type }: { type: 'ended' | 'upcoming' | 'recordings' }) => {
